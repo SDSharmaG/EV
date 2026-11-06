@@ -1,0 +1,62 @@
+/* Use same style as login page */
+.login-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.login-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eef4ff;
+}
+
+.login-image img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.login-form-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  padding: 30px 20px;
+}
+
+.login-card .btn-lg {
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.alert-danger {
+  font-size: 0.9rem;
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+  }
+  .login-image {
+    display: none;
+  }
+}

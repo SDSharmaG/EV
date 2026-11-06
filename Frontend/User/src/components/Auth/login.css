@@ -1,0 +1,137 @@
+/* =======================
+   LOGIN PAGE STYLES
+======================= */
+
+/* CONTAINER */
+.login-container {
+  display: flex;
+  margin: auto;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+.main{
+    max-width: 500px;
+}
+
+/* LEFT IMAGE (hidden on mobile) */
+.login-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eef4ff;
+}
+
+.login-image img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* FORM WRAPPER */
+.login-form-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* CARD */
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+/* BUTTONS */
+.login-card .btn {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+.login-card .btn-primary {
+  background-color: #198754;
+  border-color: #198754;
+}
+
+.login-card .btn-primary:hover {
+  background-color: #157347;
+  border-color: #157347;
+}
+
+.login-card .btn-outline-secondary {
+  border-radius: 8px;
+}
+
+/* ERROR ALERT */
+.alert-danger {
+  font-size: 0.9rem;
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+
+/* TEXT LINKS */
+.pointer {
+  cursor: pointer;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+  }
+
+  .login-image {
+    display: none; /* Hide image on mobile */
+  }
+
+  .login-form-wrapper {
+    padding: 15px;
+  }
+
+  .login-card {
+    box-shadow: none;
+  }
+}
+
+/* SMALL SCREENS */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 20px 15px;
+  }
+
+  .login-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .login-card .form-control-lg {
+    padding: 10px 12px;
+  }
+
+  .login-card .btn-lg {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+/* Make left image and right card same height */
+.login-container .row {
+  align-items: stretch; /* ensures both columns are same height */
+}
+
+.login-card {
+  width: 100%;
+  min-height: 100%; /* fill the column height */
+}
+
+.login-container img {
+  height: 100%; /* image fills its column height */
+  width: 100%;
+  object-fit: cover; /* keeps aspect ratio, fills area */
+  border-radius: 12px;
+}

@@ -1,0 +1,311 @@
+/* Stations Component Styles */
+
+/* Station Card Styles */
+.station-card {
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.station-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Card Image Styles */
+.card-img-top {
+  transition: transform 0.3s ease;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.station-card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+/* Status Badge Styles */
+.badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.5em 0.8em;
+  border-radius: 20px;
+  text-transform: capitalize;
+}
+
+.bg-success {
+  background: linear-gradient(135deg, #28a745, #20c997) !important;
+}
+
+.bg-secondary {
+  background: linear-gradient(135deg, #6c757d, #868e96) !important;
+}
+
+.bg-warning {
+  background: linear-gradient(135deg, #ffc107, #fd7e14) !important;
+  color: #000 !important;
+}
+
+.bg-info {
+  background: linear-gradient(135deg, #17a2b8, #6f42c1) !important;
+}
+
+/* Statistics Cards */
+.card.bg-primary {
+  background: linear-gradient(135deg, #007bff, #0056b3) !important;
+  border: none;
+}
+
+.card.bg-success {
+  background: linear-gradient(135deg, #28a745, #1e7e34) !important;
+  border: none;
+}
+
+.card.bg-secondary {
+  background: linear-gradient(135deg, #6c757d, #495057) !important;
+  border: none;
+}
+
+.card.bg-warning {
+  background: linear-gradient(135deg, #ffc107, #e0a800) !important;
+  border: none;
+}
+
+.card .display-6 {
+  font-size: 2.5rem;
+  opacity: 0.8;
+}
+
+/* Facilities Badges */
+.badge.bg-light {
+  background-color: #f8f9fa !important;
+  border: 1px solid #dee2e6;
+  color: #495057;
+  font-weight: 500;
+  font-size: 0.7rem;
+  padding: 0.4em 0.7em;
+}
+
+/* Button Styles */
+.btn-primary {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #0056b3, #004085);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.btn-outline-secondary {
+  border: 2px solid #6c757d;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  color: #6c757d;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+  background: #6c757d;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Filter Styles */
+.form-select {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Header Styles */
+.header-title {
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.text-primary {
+  color: #2c3e50 !important;
+  font-weight: 700;
+}
+
+/* Loading Spinner */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  border-width: 0.3em;
+}
+
+/* Alert Styles */
+.alert {
+  border: none;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+}
+
+.alert-danger {
+  background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+  color: #721c24;
+  border-left: 4px solid #dc3545;
+}
+
+/* Empty State */
+.text-center.py-5 {
+  background: #f8f9fa;
+  border-radius: 12px;
+  margin: 2rem 0;
+}
+
+.display-1.text-muted {
+  font-size: 4rem;
+  opacity: 0.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container.mt-4 {
+    margin-top: 1rem !important;
+    padding: 0 1rem;
+  }
+  
+  .d-flex.justify-content-between.align-items-center.mb-4 {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .row.mb-4 {
+    margin-bottom: 1rem !important;
+  }
+  
+  .col-md-3 {
+    margin-bottom: 1rem;
+  }
+  
+  .station-card {
+    margin-bottom: 1rem;
+  }
+  
+  .card-img-top {
+    height: 150px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .row {
+    margin: 0 -0.5rem;
+  }
+  
+  .col-md-6, .col-lg-4 {
+    padding: 0 0.5rem;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+}
+
+/* Animation for card loading */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.station-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Hover effects for interactive elements */
+.nav-link-custom:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+/* Custom scrollbar for facilities */
+.d-flex.flex-wrap.gap-1 {
+  max-height: 80px;
+  overflow-y: auto;
+}
+
+.d-flex.flex-wrap.gap-1::-webkit-scrollbar {
+  width: 4px;
+}
+
+.d-flex.flex-wrap.gap-1::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.d-flex.flex-wrap.gap-1::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 10px;
+}
+
+.d-flex.flex-wrap.gap-1::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Icon styles */
+.bi {
+  vertical-align: middle;
+}
+
+.bi-ev-station {
+  color: #28a745;
+}
+
+.bi-check-circle {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.bi-x-circle {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.bi-tools {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* Text styles */
+.text-muted {
+  color: #6c757d !important;
+}
+
+.small {
+  font-size: 0.875rem;
+}
+
+/* Card body spacing */
+.card-body.d-flex.flex-column {
+  gap: 0.5rem;
+}
+
+/* Facilities section */
+.mb-3:last-of-type {
+  margin-bottom: 1rem !important;
+}

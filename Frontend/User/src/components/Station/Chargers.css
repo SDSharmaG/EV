@@ -1,0 +1,185 @@
+/* Chargers Component Styles */
+
+.charger-card {
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+.charger-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Charger Status Styles */
+.charger-status {
+  padding: 0.4em 0.8em;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status-available {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+}
+
+.status-occupied {
+  background: linear-gradient(135deg, #ffc107, #fd7e14);
+  color: black;
+}
+
+.status-maintenance {
+  background: linear-gradient(135deg, #dc3545, #c82333);
+  color: white;
+}
+
+.status-offline {
+  background: linear-gradient(135deg, #6c757d, #495057);
+  color: white;
+}
+
+.status-unknown {
+  background: linear-gradient(135deg, #17a2b8, #138496);
+  color: white;
+}
+
+/* Modal Styles */
+.modal-content {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border-radius: 12px 12px 0 0;
+  border: none;
+}
+
+.modal-title {
+  font-weight: 600;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+/* Button Styles */
+.btn-success {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-success:hover:not(:disabled) {
+  background: linear-gradient(135deg, #218838, #1e7e34);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+.btn-success:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Alert Styles */
+.alert-info {
+  background: linear-gradient(135deg, #d1ecf1, #bee5eb);
+  border: none;
+  border-radius: 8px;
+  border-left: 4px solid #17a2b8;
+}
+
+/* Form Styles */
+.form-control, .form-select {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Badge Styles */
+.badge {
+  font-size: 0.9rem;
+  padding: 0.6em 1em;
+  border-radius: 20px;
+}
+
+.bg-primary {
+  background: linear-gradient(135deg, #007bff, #0056b3) !important;
+}
+
+.bg-success {
+  background: linear-gradient(135deg, #28a745, #20c997) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container.mt-4 {
+    margin-top: 1rem !important;
+    padding: 0 1rem;
+  }
+  
+  .d-flex.justify-content-between.align-items-center.mb-4 {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .modal-dialog {
+    margin: 1rem;
+  }
+  
+  .charger-card {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.charger-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Loading Animation */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  border-width: 0.3em;
+}
+
+/* Empty State */
+.text-center.py-5 {
+  background: #f8f9fa;
+  border-radius: 12px;
+  margin: 2rem 0;
+}
+
+.display-1.text-muted {
+  font-size: 4rem;
+  opacity: 0.5;
+}

@@ -1,0 +1,315 @@
+/* Modal Backdrop */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 1050;
+  overflow-y: auto;
+  padding: 20px 0;
+}
+
+/* Modal Container */
+.charger-modal-container {
+  width: 95%;
+  max-width: 1400px;
+  margin: auto;
+  min-height: auto;
+}
+
+/* Modal Content */
+.modal-content {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Modal Header */
+.modal-header {
+  background: #007bff;
+  color: white;
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dee2e6;
+  flex-shrink: 0;
+}
+
+.modal-header h5 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.close-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  line-height: 1;
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+/* Modal Body */
+.modal-body {
+  padding: 1.5rem;
+  overflow: auto;
+  flex: 1;
+  min-height: 0;
+}
+
+.header-actions {
+  margin-bottom: 1.5rem;
+}
+
+/* Add Charger Button */
+.add-charger-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-charger-btn:hover {
+  background: #218838;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Table Container */
+.table-container {
+  overflow-x: auto;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  background: white;
+}
+
+/* Chargers Table */
+.chargers-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  min-width: 800px;
+}
+
+.chargers-table th,
+.chargers-table td {
+  padding: 0.85rem;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+  vertical-align: middle;
+}
+
+.chargers-table thead {
+  background-color: #f8f9fa;
+  position: sticky;
+  top: 0;
+}
+
+.chargers-table thead th {
+  font-weight: 600;
+  border-bottom: 2px solid #dee2e6;
+  background-color: #e9ecef;
+  color: #495057;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.chargers-table tbody tr {
+  transition: background-color 0.15s;
+}
+
+.chargers-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Status Badge */
+.status-badge {
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.status-badge.available {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-badge.occupied {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.status-badge.maintenance {
+  background: #fff3cd;
+  color: #856404;
+}
+
+/* Action Buttons */
+.actions-column {
+  width: 180px;
+  min-width: 180px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-start;
+}
+
+.edit-btn {
+  background: #ffc107;
+  color: #212529;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  min-width: 60px;
+}
+
+.edit-btn:hover {
+  background: #e0a800;
+  transform: translateY(-1px);
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  min-width: 70px;
+}
+
+.delete-btn:hover {
+  background: #c82333;
+  transform: translateY(-1px);
+}
+
+/* No Chargers Message */
+.no-chargers {
+  text-align: center;
+  color: #6c757d;
+  font-style: italic;
+  padding: 3rem !important;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .charger-modal-container {
+    width: 98%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-backdrop {
+    padding: 10px 0;
+    align-items: flex-start;
+  }
+  
+  .charger-modal-container {
+    width: 100%;
+    margin: 10px;
+  }
+  
+  .modal-content {
+    max-height: 95vh;
+  }
+  
+  .modal-header {
+    padding: 1rem;
+  }
+  
+  .modal-header h5 {
+    font-size: 1.1rem;
+  }
+  
+  .modal-body {
+    padding: 1rem;
+  }
+  
+  .chargers-table {
+    font-size: 0.8rem;
+    min-width: 700px;
+  }
+  
+  .chargers-table th,
+  .chargers-table td {
+    padding: 0.6rem;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  
+  .edit-btn,
+  .delete-btn {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.75rem;
+    min-width: 55px;
+  }
+  
+  .actions-column {
+    width: 120px;
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-header {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  
+  .modal-header h5 {
+    font-size: 1rem;
+  }
+  
+  .add-charger-btn {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
